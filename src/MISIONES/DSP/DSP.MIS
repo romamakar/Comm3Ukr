@@ -1,0 +1,4588 @@
+[
+  .VISORES [ .XYZ ( -628 -814 -98 ) .ESC EXTERIOR .CAMARA 0 ]
+  .MUSICA
+  [
+    .MUSICAS ( ( SINMUSICA.WAV EXTERIOR ) ( SINMUSICA.WAV INTERIOR ) )
+    .MUSICA_POR_DEFECTO EXTERIOR
+  ]
+  .BRIEFING [ .INICIAL DSP_INI.BRI ]
+  .MUNDO
+  [
+    .GESTOR_BOMBARDEOS
+    (
+      [
+        .ESCENARIO EXTERIOR
+        .EVENTO_INICIO_BOMBARDEO FBRI
+        .TIEMPO_MINIMO_EXPLOSION 100
+        .TIEMPO_MAXIMO_EXPLOSION 400
+        .PUNTOS_EXPLOSIONES
+        (
+          ( 475 -526 -97 )
+          ( 752 -484 -97 )
+          ( -425 -641 -98 )
+          ( -791 -302 -97 )
+          ( -117 -364 -95 )
+          ( -516 -317 -96 )
+          ( 859 -45 -97 )
+          ( 67 -812 -97 )
+          ( 826 -478 -97 )
+          ( 618 -115 -96 )
+          ( 476 -542 -97 )
+          ( 303 -794 4 )
+          ( 359 -16 -96 )
+          ( 405 -498 -97 )
+          ( 288 -809 -97 )
+          ( 84 -433 -97 )
+          ( 57 5 -96 )
+          ( 24 -498 -97 )
+          ( -9 -898 -97 )
+          ( -103 -1056 -97 )
+          ( -242 -377 -96 )
+          ( -212 99 -83 )
+          ( -439 -650 -98 )
+          ( -588 -837 -98 )
+          ( -591 -307 -96 )
+          ( -759 -267 -97 )
+          ( -853 -676 -98 )
+          ( -865 -362 -97 )
+          ( -976 -55 -102 )
+          ( -986 -542 -98 )
+          ( -944 78 -102 )
+          ( 143 -901 -97 )
+          ( 40 -497 -97 )
+          ( 332 152 -98 )
+          ( 107 -263 -98 )
+          ( 375 -601 -97 )
+          ( 255 -1045 -97 )
+          ( 298 -1576 -108 )
+          ( -389 -1507 -106 )
+          ( -560 -1477 -106 )
+          ( -663 -1228 -100 )
+          ( -872 -1160 -100 )
+          ( -882 -1480 -109 )
+          ( 599 -1211 -99 )
+          ( 901 -1021 -98 )
+          ( 861 -1308 -105 )
+          ( -156 -1389 -99 )
+          ( -646 -1242 -100 )
+          ( 525 -1422 -104 )
+          ( 726 -1475 -109 )
+          ( 140 -1669 -110 )
+          ( -264 -1651 -109 )
+          ( -633 -1640 -113 )
+          ( -878 -1450 -108 )
+          ( -897 -1143 -99 )
+        )
+      ]
+    )
+    .BICHOS
+    (
+      MACRO COMANDO
+        Token COMANDO
+        Bando ALIADO
+        PosMundo [ .XYZ ( -1966 -2807 -122 ) .ESC EXTERIOR ]
+        Anima [ .NOMBRE_ANI COMANDO.ANI .ASPECTO Base ]
+        Angulo 60
+        TokensActuaSobre ( )
+        AnguloVistaMultiplayer 80
+        DistanciaVistaMultiplayer 1000
+        Bichos
+        (
+          MACRO PISTOLA
+            Token PISTOLA_CM
+            PosMundo [ .XYZ ( 537 -943 0 ) .ESC EXTERIOR ]
+          ENDMACRO
+          MACRO CUCHI
+            Token CUCHI_CM
+            PosMundo [ .XYZ ( 640 -1290 335 ) .ESC EXTERIOR ]
+          ENDMACRO
+          MACRO ACTIVADOR
+            Token ACTI_SENUELO
+            PosMundo [ .XYZ ( 1343 -1030 0 ) .ESC EXTERIOR ]
+            TokenSenuelo SENUELO
+          ENDMACRO
+          MACRO SENUELO
+            Token SENUELO
+            PosMundo [ .XYZ ( 1280 -1057 0 ) .ESC EXTERIOR ]
+          ENDMACRO
+          MACRO BOTIQUIN
+            Token BOT_FACIL_0
+            PosMundo [ .XYZ ( 1280 -1057 0 ) .ESC EXTERIOR ]
+            CantDeDosis 5
+          ENDMACRO
+          MACRO CIZALLAS
+            Token PA_CORTAR
+            PosMundo [ .XYZ ( -461 -316 -101 ) .ESC EXTERIOR ]
+          ENDMACRO
+          MACRO RIFLEALEMAN
+            Token RIFLE_COM
+            PosMundo [ .XYZ ( -588 -736 -102 ) .ESC EXTERIOR ]
+            NumUnidades 1
+            CantMunicion 8
+          ENDMACRO
+        )
+        Mochila [ .TIENE_ITEMS_BASICOS 1 .ITEMS ( ) ]
+        TumbadoAlInicio 0
+      ENDMACRO
+      MACRO METRALLON
+        Token AMET_01
+        PosMundo [ .XYZ ( -651 24 9 ) .ESC EXTERIOR ]
+        Angulo 75
+        Atril ATRIL_AMET01
+        Bichos
+        (
+          MACRO ALESCRIP_ARMAESTATICA
+            Token ALE_AMETRALL01
+            PosMundo [ .XYZ ( 1331 -52 0 ) .ESC EXTERIOR ]
+            Disparador [ .ARMA Z ]
+            Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+            Angulo 60
+            EventosRuta ( )
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO ATRILMETRALLON
+        Token ATRIL_AMET01
+        PosMundo [ .XYZ ( -651 24 9 ) .ESC EXTERIOR ]
+        Angulo 260
+        HayLimiteAngular 1
+        LimAngDerecho 200
+        LimAngIzquierdo 320
+      ENDMACRO
+      MACRO METRALLON
+        Token AMET_02
+        PosMundo [ .XYZ ( 73 347 -55 ) .ESC EXTERIOR ]
+        Angulo 75
+        Atril ATRIL_AMET02
+        Bichos
+        (
+          MACRO ALESCRIP_ARMAESTATICA
+            Token ALE_AMETRALL02
+            PosMundo [ .XYZ ( 73 347 -55 ) .ESC EXTERIOR ]
+            Disparador [ .ARMA Z ]
+            Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+            Angulo 60
+            EventosRuta ( )
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO ATRILMETRALLON
+        Token ATRIL_AMET02
+        PosMundo [ .XYZ ( 73 347 -55 ) .ESC EXTERIOR ]
+        Angulo 260
+        HayLimiteAngular 1
+        LimAngDerecho 200
+        LimAngIzquierdo 320
+      ENDMACRO
+      MACRO METRALLON
+        Token AMET_03
+        PosMundo [ .XYZ ( 620 296 -11 ) .ESC EXTERIOR ]
+        Angulo 75
+        Atril ATRIL_AMET03
+        Bichos
+        (
+          MACRO ALESCRIP_ARMAESTATICA
+            Token ALE_AMETRALL03
+            PosMundo [ .XYZ ( 620 296 -11 ) .ESC EXTERIOR ]
+            Disparador [ .ARMA Z ]
+            Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+            Angulo 60
+            EventosRuta ( )
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO ATRILMETRALLON
+        Token ATRIL_AMET03
+        PosMundo [ .XYZ ( 620 296 -11 ) .ESC EXTERIOR ]
+        Angulo 260
+        HayLimiteAngular 1
+        LimAngDerecho 200
+        LimAngIzquierdo 320
+      ENDMACRO
+      MACRO METRALLON
+        Token AMET_04
+        PosMundo [ .XYZ ( -586 840 303 ) .ESC EXTERIOR ]
+        Angulo 75
+        Atril ATRIL_AMET04
+        Bichos
+        (
+          MACRO ALESCRIP_ARMAESTATICA
+            Token ALE_AMETRALL04
+            PosMundo [ .XYZ ( -586 840 303 ) .ESC EXTERIOR ]
+            Disparador [ .ARMA Z ]
+            Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+            Angulo 60
+            EventosRuta ( )
+            QuedarseEnElSitio 1
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO ATRILMETRALLON
+        Token ATRIL_AMET04
+        PosMundo [ .XYZ ( -586 840 303 ) .ESC EXTERIOR ]
+        Angulo 300
+        HayLimiteAngular 1
+        LimAngDerecho 200
+        LimAngIzquierdo 320
+      ENDMACRO
+      MACRO METRALLON
+        Token AMET_05
+        PosMundo [ .XYZ ( -241 1091 139 ) .ESC EXTERIOR ]
+        Angulo 75
+        Atril ATRIL_AMET05
+        Bichos
+        (
+          MACRO ALESCRIP_ARMAESTATICA
+            Token ALE_AMETRALL05
+            PosMundo [ .XYZ ( -241 1091 139 ) .ESC EXTERIOR ]
+            Disparador [ .ARMA Z ]
+            Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+            Angulo 60
+            EventosRuta ( )
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO ATRILMETRALLON
+        Token ATRIL_AMET05
+        PosMundo [ .XYZ ( -241 1091 139 ) .ESC EXTERIOR ]
+        Angulo 290
+        HayLimiteAngular 1
+        LimAngDerecho 180
+        LimAngIzquierdo 300
+      ENDMACRO
+      MACRO METRALLON
+        Token AMET_06
+        PosMundo [ .XYZ ( 641 862 310 ) .ESC EXTERIOR ]
+        Angulo 75
+        Atril ATRIL_AMET06
+        Bichos
+        (
+          MACRO ALESCRIP_ARMAESTATICA
+            Token ALE_AMETRALL06
+            PosMundo [ .XYZ ( 641 862 310 ) .ESC EXTERIOR ]
+            Disparador [ .ARMA Z ]
+            Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+            Angulo 60
+            EventosRuta ( )
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO ATRILMETRALLON
+        Token ATRIL_AMET06
+        PosMundo [ .XYZ ( 641 862 310 ) .ESC EXTERIOR ]
+        Angulo 230
+        HayLimiteAngular 1
+        LimAngDerecho 200
+        LimAngIzquierdo 320
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET01_01
+        PosMundo [ .XYZ ( -604 28 8 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET01_02
+        PosMundo [ .XYZ ( -701 67 7 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET01_03
+        PosMundo [ .XYZ ( -566 82 7 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET01_04
+        PosMundo [ .XYZ ( -594 279 -26 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET02_01
+        PosMundo [ .XYZ ( 111 352 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET02_02
+        PosMundo [ .XYZ ( 155 370 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET02_03
+        PosMundo [ .XYZ ( 53 421 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET02_04
+        PosMundo [ .XYZ ( 204 411 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET03_01
+        PosMundo [ .XYZ ( 592 365 -14 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET03_02
+        PosMundo [ .XYZ ( 664 307 -12 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_JUNTO_AMET03_03
+        PosMundo [ .XYZ ( 704 349 -16 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CUBRE_01
+        PosMundo [ .XYZ ( -990 231 -14 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CUBRE_02
+        PosMundo [ .XYZ ( 284 547 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CUBRE_03
+        PosMundo [ .XYZ ( 0 554 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CUBRE_04
+        PosMundo [ .XYZ ( -156 510 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_BUNKER01_01
+        PosMundo [ .XYZ ( -414 885 140 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_BUNKER01_02
+        PosMundo [ .XYZ ( -372 929 140 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_BUNKER01_03
+        PosMundo [ .XYZ ( -323 983 140 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_MATADOR
+        PosMundo [ .XYZ ( -2081 -3066 -96 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER01
+        PosMundo [ .XYZ ( 162 510 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER02
+        PosMundo [ .XYZ ( -179 478 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 70
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER03
+        PosMundo [ .XYZ ( -692 229 -16 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 20
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER04
+        PosMundo [ .XYZ ( 292 642 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 27
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER05
+        PosMundo [ .XYZ ( -28 193 -89 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 57
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER06
+        PosMundo [ .XYZ ( 116 465 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 12
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER07
+        PosMundo [ .XYZ ( -65 345 -56 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 220
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_CADAVER08
+        PosMundo [ .XYZ ( 716 450 -30 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 312
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_GRANADAS_01
+        PosMundo [ .XYZ ( -216 447 -55 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Granadero ]
+        Angulo 290
+        EventosRuta ( )
+        NumGranadas 3
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_001
+        PosMundo [ .XYZ ( -249 -2943 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_002
+        PosMundo [ .XYZ ( -203 -2970 -107 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_003
+        PosMundo [ .XYZ ( -315 -2997 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_004
+        PosMundo [ .XYZ ( -296 -2909 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_005
+        PosMundo [ .XYZ ( -257 -2994 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_006
+        PosMundo [ .XYZ ( -147 -2855 -107 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_006BIS
+        PosMundo [ .XYZ ( -167 -2885 -107 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_007
+        PosMundo [ .XYZ ( -184 -3022 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_008
+        PosMundo [ .XYZ ( -355 -2928 -105 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_009
+        PosMundo [ .XYZ ( -196 -2793 -107 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_010
+        PosMundo [ .XYZ ( -208 -3028 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_011
+        PosMundo [ .XYZ ( -380 -2812 -105 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_012
+        PosMundo [ .XYZ ( -374 -3039 -104 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_013
+        PosMundo [ .XYZ ( -1334 -2910 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_014
+        PosMundo [ .XYZ ( -1218 -2742 -119 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_015
+        PosMundo [ .XYZ ( -1073 -2770 -118 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_016
+        PosMundo [ .XYZ ( -695 -2951 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_017
+        PosMundo [ .XYZ ( -624 -2709 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_018
+        PosMundo [ .XYZ ( -600 -2992 -113 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_021
+        PosMundo [ .XYZ ( -361 -2792 -105 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_022
+        PosMundo [ .XYZ ( -345 -3025 -105 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_023
+        PosMundo [ .XYZ ( -1354 -2912 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_024
+        PosMundo [ .XYZ ( -1246 -2759 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_025
+        PosMundo [ .XYZ ( -1037 -2771 -118 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_026
+        PosMundo [ .XYZ ( -733 -2925 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_027
+        PosMundo [ .XYZ ( -663 -2697 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_028
+        PosMundo [ .XYZ ( -609 -3027 -113 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_031
+        PosMundo [ .XYZ ( -327 -2751 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_032
+        PosMundo [ .XYZ ( -332 -3012 -105 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_033
+        PosMundo [ .XYZ ( -1287 -2844 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_034
+        PosMundo [ .XYZ ( -1261 -2687 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_035
+        PosMundo [ .XYZ ( -1052 -2649 -118 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_036
+        PosMundo [ .XYZ ( -665 -2946 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_037
+        PosMundo [ .XYZ ( -651 -2663 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_038
+        PosMundo [ .XYZ ( -638 -3012 -113 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_041
+        PosMundo [ .XYZ ( -327 -2751 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_042
+        PosMundo [ .XYZ ( -332 -3012 -105 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_043
+        PosMundo [ .XYZ ( -1287 -2844 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_044
+        PosMundo [ .XYZ ( -1261 -2687 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_045
+        PosMundo [ .XYZ ( -1052 -2649 -118 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_046
+        PosMundo [ .XYZ ( -665 -2946 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_047
+        PosMundo [ .XYZ ( -651 -2663 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_048
+        PosMundo [ .XYZ ( -638 -3012 -113 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_051
+        PosMundo [ .XYZ ( -327 -2751 -106 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_052
+        PosMundo [ .XYZ ( -332 -3012 -105 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_053
+        PosMundo [ .XYZ ( -1287 -2844 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_054
+        PosMundo [ .XYZ ( -1261 -2687 -120 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_055
+        PosMundo [ .XYZ ( -1052 -2649 -118 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_056
+        PosMundo [ .XYZ ( -665 -2946 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_057
+        PosMundo [ .XYZ ( -651 -2663 -114 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token INFANTE_058
+        PosMundo [ .XYZ ( -638 -3012 -113 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALIADO
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Soldado_Australiano ]
+        Angulo 99
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA01
+        PosMundo [ .XYZ ( -1 -1861 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_NORMAL 1
+                .VEL_RAPIDA 9
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 1 .LAMBDA 0.310000 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 91
+        EventosRuta ( )
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA02
+        PosMundo [ .XYZ ( -734 -1605 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_NORMAL 1
+                .VEL_RAPIDA 6
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 2 .LAMBDA 0.760000 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 73
+        EventosRuta ( )
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA03
+        PosMundo [ .XYZ ( 665 -1519 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_RAPIDA 9
+                .VEL_NORMAL 1
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 3 .LAMBDA 0.240000 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 91
+        EventosRuta ( )
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA04
+        PosMundo [ .XYZ ( -431 -1783 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_RAPIDA 9
+                .VEL_NORMAL 1
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 4 .LAMBDA 0.830000 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 85
+        EventosRuta ( )
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA05
+        PosMundo [ .XYZ ( 281 -1784 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_RAPIDA 9
+                .VEL_NORMAL 1
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 5 .LAMBDA 0.790000 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 99
+        EventosRuta ( )
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA06
+        PosMundo [ .XYZ ( -922 -1455 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_NORMAL 1
+                .VEL_RAPIDA 6
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 6 .LAMBDA 0.879999 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 99
+        EventosRuta ( )
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA07
+        PosMundo [ .XYZ ( 919 -1305 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_NORMAL 1
+                .VEL_RAPIDA 9
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 8 .LAMBDA 0.620000 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 99
+        EventosRuta ( )
+      ENDMACRO
+      MACRO BARCAZA_RAILES
+        Token BARCAZA08
+        PosMundo [ .XYZ ( -218 -2016 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .LOOP 1
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_NORMAL 1
+                .VEL_RAPIDA 9
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 9 .LAMBDA 0.650000 .VEL VEL_NORMAL ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 99
+        EventosRuta ( )
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA01
+        PosMundo [ .XYZ ( -920 -2959 -116 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 79
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA02
+        PosMundo [ .XYZ ( -940 -2979 -116 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 90
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA03
+        PosMundo [ .XYZ ( -900 -2939 -116 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 79
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA04
+        PosMundo [ .XYZ ( -960 -2959 -116 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 90
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA05
+        PosMundo [ .XYZ ( -1105 -2926 -118 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 77
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA06
+        PosMundo [ .XYZ ( -1125 -2946 -118 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 77
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA07
+        PosMundo [ .XYZ ( -1095 -2936 -118 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 77
+      ENDMACRO
+      MACRO CHUSMAFUSIL
+        Token CHUSMA08
+        PosMundo [ .XYZ ( -1145 -2956 -118 ) .ESC EXTERIOR ]
+        Bando ALIADO
+        Angulo 77
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DISPARA_01
+        PosMundo [ .XYZ ( -1406 -3021 -96 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DISPARA_02
+        PosMundo [ .XYZ ( -1288 -3044 -96 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_01
+        PosMundo [ .XYZ ( -902 938 31 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO OficialSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_02
+        PosMundo [ .XYZ ( -739 1012 -33 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_03
+        PosMundo [ .XYZ ( -243 1275 32 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_04
+        PosMundo [ .XYZ ( 70 -83 150 ) .ESC DSP_06 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_05
+        PosMundo [ .XYZ ( -32 -77 150 ) .ESC DSP_06 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_06
+        PosMundo [ .XYZ ( -34 -45 0 ) .ESC DSP_06 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_07
+        PosMundo [ .XYZ ( -60 45 30 ) .ESC DSP_05 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_08
+        PosMundo [ .XYZ ( 160 157 0 ) .ESC DSP_05 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_PUERTA_R_01
+        PosMundo [ .XYZ ( 55 -33 -25 ) .ESC DSP_05 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_PUERTA_R_02
+        PosMundo [ .XYZ ( 180 -35 -25 ) .ESC DSP_05 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_PUERTA_R_03
+        PosMundo [ .XYZ ( 178 129 1 ) .ESC DSP_05 ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Granadero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 5
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_09
+        PosMundo [ .XYZ ( -51 -95 150 ) .ESC DSP_04 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_10
+        PosMundo [ .XYZ ( 21 -72 150 ) .ESC DSP_04 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_11
+        PosMundo [ .XYZ ( -25 -57 0 ) .ESC DSP_04 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_12
+        PosMundo [ .XYZ ( 69 -7 32 ) .ESC DSP_03 ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO OficialSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+        Vigilador [ ]
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_13
+        PosMundo [ .XYZ ( 98 37 0 ) .ESC DSP_03 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_14
+        PosMundo [ .XYZ ( 107 19 0 ) .ESC DSP_03 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_15
+        PosMundo [ .XYZ ( 95 9 0 ) .ESC DSP_03 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_16
+        PosMundo [ .XYZ ( 95 -37 0 ) .ESC DSP_03 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+/*
+      MACRO ALESCRIP
+        Token ALE_DENTRO_17
+        PosMundo [ .XYZ ( 114 -6 0 ) .ESC DSP_03 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+*/
+      MACRO ALESCRIP
+        Token ALE_DENTRO_18
+        PosMundo [ .XYZ ( -131 -84 0 ) .ESC DSP_02 ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Cabo ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIPTPARAPETADOR
+        Token ALE_DENTRO_19
+        PosMundo [ .XYZ ( -277 -88 0 ) .ESC DSP_02 ]
+        Disparador [ .ARMA Z ]
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO AleOfi ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_20
+        PosMundo [ .XYZ ( -236 164 104 ) .ESC DSP_02 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_21
+        PosMundo [ .XYZ ( -147 155 104 ) .ESC DSP_02 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_22
+        PosMundo [ .XYZ ( -242 90 73 ) .ESC DSP_02 ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO AleOfi ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_23
+        PosMundo [ .XYZ ( -242 90 73 ) .ESC DSP_02 ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO AleOfi ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_24
+        PosMundo [ .XYZ ( 114 33 32 ) .ESC DSP_02 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_25
+        PosMundo [ .XYZ ( 135 38 32 ) .ESC DSP_02 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_26
+        PosMundo [ .XYZ ( -116 93 74 ) .ESC DSP_02 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_27
+        PosMundo [ .XYZ ( 66 38 0 ) .ESC DSP_01 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_28
+        PosMundo [ .XYZ ( 29 44 0 ) .ESC DSP_01 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_29
+        PosMundo [ .XYZ ( -109 41 0 ) .ESC DSP_01 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_30
+        PosMundo [ .XYZ ( -737 2000 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_31
+        PosMundo [ .XYZ ( -502 2158 49 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_32
+        PosMundo [ .XYZ ( -765 1928 37 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_33
+        PosMundo [ .XYZ ( 826 1133 -33 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_34
+        PosMundo [ .XYZ ( 203 2003 37 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_35
+        PosMundo [ .XYZ ( -97 -40 1 ) .ESC DSP_02 ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_36
+        PosMundo [ .XYZ ( -158 2025 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO AleOfi ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_37
+        PosMundo [ .XYZ ( -223 2058 39 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_01
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO AleOfi ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_02
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_03
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_04
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_05
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_06
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIPTPARAPETADOR
+        Token ALE_RAFA2_01
+        PosMundo [ .XYZ ( 318 2373 45 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA PISTOLA ]
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO AleOfi ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA2_02
+        PosMundo [ .XYZ ( 318 2373 45 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA2_03
+        PosMundo [ .XYZ ( 318 2373 45 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA2_04
+        PosMundo [ .XYZ ( 318 2373 45 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA2_05
+        PosMundo [ .XYZ ( 318 2373 45 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA2_06
+        PosMundo [ .XYZ ( 318 2373 45 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_07
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_RAFA_08
+        PosMundo [ .XYZ ( -334 2370 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_DENTRO_38
+        PosMundo [ .XYZ ( -226 2007 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XM.ANI .ASPECTO SoldadoSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO CAJAMADERA
+        Token CAJA03
+        PosMundo [ .XYZ ( -306 -238 -95 ) .ESC EXTERIOR ]
+        Angulo 156
+        Bichos
+        (
+          MACRO GRANADA
+            Token GRANADAS03
+            PosMundo [ .XYZ ( -306 -238 -95 ) .ESC EXTERIOR ]
+            NumUnidades 2
+          ENDMACRO
+          MACRO BOTIQUIN
+            Token BOT_FACIL_1
+            PosMundo [ .XYZ ( 1280 -1057 0 ) .ESC EXTERIOR ]
+            CantDeDosis 5
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO CAJAMADERA
+        Token CAJA04
+        PosMundo [ .XYZ ( 172 465 -54 ) .ESC EXTERIOR ]
+        Angulo 56
+        Bichos
+        (
+          MACRO SUBFUSILALEMAN
+            Token FUSIL_ASALTO01
+            PosMundo [ .XYZ ( -78 601 -54 ) .ESC EXTERIOR ]
+            NumUnidades 1
+            CantMunicion 10
+          ENDMACRO
+          MACRO BOTIQUIN
+            Token BOT_FACIL
+            PosMundo [ .XYZ ( 1280 -1057 0 ) .ESC EXTERIOR ]
+            CantDeDosis 5
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO CAJAMADERA
+        Token CAJA05
+        PosMundo [ .XYZ ( -9 -60 33 ) .ESC DSP_03 ]
+        Angulo 56
+        Bichos
+        (
+          MACRO SUBFUSILALEMAN
+            Token FUSIL_ASALTO02
+            PosMundo [ .XYZ ( -12 -100 1 ) .ESC DSP_03 ]
+            NumUnidades 1
+            CantMunicion 12
+          ENDMACRO
+          MACRO GRANADA
+            Token GRANADAS05
+            PosMundo [ .XYZ ( -306 -238 -95 ) .ESC EXTERIOR ]
+            NumUnidades 2
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO CAJAMADERA
+        Token CAJA06
+        PosMundo [ .XYZ ( -253 2093 39 ) .ESC EXTERIOR ]
+        Angulo 56
+        Bichos
+        (
+          MACRO GRANADA
+            Token GRANADAS04
+            PosMundo [ .XYZ ( -306 -238 -95 ) .ESC EXTERIOR ]
+            NumUnidades 2
+          ENDMACRO
+          MACRO CARGADORRIFLECORTO
+            Token CARGADOR_00
+            PosMundo [ .XYZ ( -518 2105 38 ) .ESC EXTERIOR ]
+            NumBalas 12
+          ENDMACRO
+          MACRO BOTIQUIN
+            Token BOT_FACIL_6
+            PosMundo [ .XYZ ( 1280 -1057 0 ) .ESC EXTERIOR ]
+            CantDeDosis 5
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO CAJAMADERA
+        Token CAJA07
+        PosMundo [ .XYZ ( 75 -3 151 ) .ESC DSP_06 ]
+        Angulo 56
+        Bichos
+        (
+          MACRO GRANADA
+            Token GRAN7
+            PosMundo [ .XYZ ( -306 -238 -95 ) .ESC EXTERIOR ]
+            NumUnidades 2
+          ENDMACRO
+          MACRO CARGADORRIFLECORTO
+            Token CARGA7
+            PosMundo [ .XYZ ( -518 2105 38 ) .ESC EXTERIOR ]
+            NumBalas 12
+          ENDMACRO
+          MACRO BOTIQUIN
+            Token BOT_FACIL_7
+            PosMundo [ .XYZ ( 1280 -1057 0 ) .ESC EXTERIOR ]
+            CantDeDosis 5
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO CAJAMADERA
+        Token CAJA08
+        PosMundo [ .XYZ ( 57 61 151 ) .ESC DSP_04 ]
+        Angulo 270
+        Bichos
+        (
+          MACRO GRANADA
+            Token GRAN8
+            PosMundo [ .XYZ ( -306 -238 -95 ) .ESC EXTERIOR ]
+            NumUnidades 2
+          ENDMACRO
+          MACRO CARGADORRIFLECORTO
+            Token CARGA8
+            PosMundo [ .XYZ ( -518 2105 38 ) .ESC EXTERIOR ]
+            NumBalas 12
+          ENDMACRO
+          MACRO BOTIQUIN
+            Token BOT_FACIL_8
+            PosMundo [ .XYZ ( 1280 -1057 0 ) .ESC EXTERIOR ]
+            CantDeDosis 5
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO MINA
+        Token MINA001
+        PosMundo [ .XYZ ( -7 857 -54 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA002
+        PosMundo [ .XYZ ( -32 849 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA003
+        PosMundo [ .XYZ ( -47 822 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA004
+        PosMundo [ .XYZ ( -77 811 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA005
+        PosMundo [ .XYZ ( -120 772 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA006
+        PosMundo [ .XYZ ( -161 739 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA007
+        PosMundo [ .XYZ ( -191 730 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA008
+        PosMundo [ .XYZ ( -233 663 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA009
+        PosMundo [ .XYZ ( -260 619 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA010
+        PosMundo [ .XYZ ( -255 584 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA011
+        PosMundo [ .XYZ ( -285 528 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA012
+        PosMundo [ .XYZ ( -307 501 -54 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA013
+        PosMundo [ .XYZ ( -313 469 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA014
+        PosMundo [ .XYZ ( -107 798 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA027
+        PosMundo [ .XYZ ( -154 766 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA028
+        PosMundo [ .XYZ ( -244 636 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA029
+        PosMundo [ .XYZ ( 38 889 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA030
+        PosMundo [ .XYZ ( -11 893 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA031
+        PosMundo [ .XYZ ( -35 873 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA032
+        PosMundo [ .XYZ ( -62 861 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA033
+        PosMundo [ .XYZ ( -83 830 -53 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA034
+        PosMundo [ .XYZ ( -121 817 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA035
+        PosMundo [ .XYZ ( -170 799 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA036
+        PosMundo [ .XYZ ( -208 771 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA037
+        PosMundo [ .XYZ ( -269 696 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA038
+        PosMundo [ .XYZ ( -295 655 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA039
+        PosMundo [ .XYZ ( -336 601 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA040
+        PosMundo [ .XYZ ( -328 545 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA059
+        PosMundo [ .XYZ ( -326 827 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO MINA
+        Token MINA060
+        PosMundo [ .XYZ ( -256 775 -55 ) .ESC EXTERIOR ]
+        NumUnidades 1
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_01
+        PosMundo [ .XYZ ( -726 376 -53 ) .ESC EXTERIOR ]
+        Angulo 262
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_02
+        PosMundo [ .XYZ ( -577 369 -48 ) .ESC EXTERIOR ]
+        Angulo 272
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_03
+        PosMundo [ .XYZ ( -448 367 -47 ) .ESC EXTERIOR ]
+        Angulo 280
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_04
+        PosMundo [ .XYZ ( -313 415 -55 ) .ESC EXTERIOR ]
+        Angulo 301
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_00
+        PosMundo [ .XYZ ( -908 187 -4 ) .ESC EXTERIOR ]
+        Angulo 266
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_05
+        PosMundo [ .XYZ ( -245 542 -54 ) .ESC EXTERIOR ]
+        Angulo 341
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_06
+        PosMundo [ .XYZ ( -182 671 -55 ) .ESC EXTERIOR ]
+        Angulo 321
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_07
+        PosMundo [ .XYZ ( -77 769 -54 ) .ESC EXTERIOR ]
+        Angulo 303
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_09
+        PosMundo [ .XYZ ( 173 817 -54 ) .ESC EXTERIOR ]
+        Angulo 230
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_10
+        PosMundo [ .XYZ ( 276 760 -55 ) .ESC EXTERIOR ]
+        Angulo 236
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_11
+        PosMundo [ .XYZ ( 385 638 -55 ) .ESC EXTERIOR ]
+        Angulo 224
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_12
+        PosMundo [ .XYZ ( 517 556 -51 ) .ESC EXTERIOR ]
+        Angulo 252
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_13
+        PosMundo [ .XYZ ( 659 550 -51 ) .ESC EXTERIOR ]
+        Angulo 270
+      ENDMACRO
+      MACRO ALAMBRADAADORNO
+        Token ADORNO_08
+        PosMundo [ .XYZ ( 32 846 -54 ) .ESC EXTERIOR ]
+        Angulo 313
+      ENDMACRO
+      MACRO VEHIQUITAMINNEUTRAL
+        Token QUITANIEVES
+        PosMundo [ .XYZ ( 612 -757 -97 ) .ESC EXTERIOR ]
+        PatrullajeRail
+        [
+          .RECPATRULLA_RAIL
+          [
+            .RUTAS
+            (
+              [
+                .ESCENARIO EXTERIOR
+                .NOMBRE DEFAULT
+                .VEL_NORMAL 2
+                .VEL_RAPIDA 4
+                .VEL_TURBO 6
+                .TIPO_VEL_DEFECTO VEL_NORMAL
+                .ESCALAS
+                (
+                  (
+                    SIGUE_ARISTA
+                    [
+                      .ID_ARISTA 34
+                      .LAMBDA 0.610000
+                      .VEL VEL_RAPIDA
+                    ]
+                  )
+                  ( ESPERA_EVENTO [ .FLI_EVENTO MET3 ] )
+                  ( ESPERA [ .TIEMPO 120 ] )
+                  (
+                    SIGUE_ARISTA
+                    [ .ID_ARISTA 16 .LAMBDA 0.300000 .VEL VEL_TURBO ]
+                  )
+                  (
+                    SIGUE_ARISTA
+                    [
+                      .ID_ARISTA 11
+                      .LAMBDA 0.909999
+                      .VEL VEL_RAPIDA
+                    ]
+                  )
+                  (
+                    SIGUE_ARISTA
+                    [
+                      .ID_ARISTA 29
+                      .LAMBDA 0.989999
+                      .VEL VEL_RAPIDA
+                    ]
+                  )
+                  (
+                    SIGUE_ARISTA
+                    [
+                      .ID_ARISTA 35
+                      .LAMBDA 0.050000
+                      .VEL VEL_RAPIDA
+                    ]
+                  )
+                )
+              ]
+            )
+            .NO_MARCHA_ATRAS 0
+            .RUTA_DEFECTO DEFAULT
+          ]
+        ]
+        Angulo 127
+        Blindaje 100
+        EventosRuta ( )
+      ENDMACRO
+      MACRO TORRETA
+        Token TORRETA_IN
+        Ordenes
+        (
+          ( GIRA [ .ANGULOFINAL 280 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 240 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 290 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+        )
+        PosMundo [ .XYZ ( 0 -79 5 ) .ESC DSP_01 ]
+        Angulo 284
+        EvParada TR01
+      ENDMACRO
+      MACRO TORRETA
+        Token TORRETA_OUT
+        Ordenes
+        (
+          ( GIRA [ .ANGULOFINAL 300 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 280 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 310 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+        )
+        PosMundo [ .XYZ ( -500 1505 36 ) .ESC EXTERIOR ]
+        Angulo 294
+        EvParada TR01
+      ENDMACRO
+      MACRO CANONANTICARRO
+        Token TORRETA2_IN
+        Ordenes
+        (
+          ( GIRA [ .ANGULOFINAL 60 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 120 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 90 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+        )
+        PosMundo [ .XYZ ( 155 66 33 ) .ESC DSP_02 ]
+        Angulo 93
+        EvParada TR02
+        DistFogonazo 100
+      ENDMACRO
+      MACRO CANONANTICARRO
+        Token TORRETA2_OUT
+        Ordenes
+        (
+          ( GIRA [ .ANGULOFINAL 292 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 342 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+          ( GIRA [ .ANGULOFINAL 315 ] )
+          ( ESPERA [ .ESPERA 50 ] )
+          ( DISPARA [ ] )
+          ( ESPERA [ .ESPERA 120 ] )
+        )
+        PosMundo [ .XYZ ( 627 1581 68 ) .ESC EXTERIOR ]
+        Angulo 315
+        EvParada TR02
+        DistFogonazo 100
+      ENDMACRO
+      MACRO ALESCRIP
+        Token LANZA_VENTANA
+        PosMundo [ .XYZ ( 2243 -537 -102 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 0
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO SILLA_V
+        Token SILLA_01
+        PosMundo [ .XYZ ( -290 2211 45 ) .ESC EXTERIOR ]
+        Angulo 99
+        Bando ALEMAN
+        PermiteAliados 0
+        PermiteAlemanes 1
+        PermiteNeutrales 0
+        AnimDentro SENTADO_EN_SILLA_MESA
+        XFuera -10 
+      ENDMACRO
+      MACRO SILLA_V
+        Token SILLA_02
+        PosMundo [ .XYZ ( -218 2222 45 ) .ESC EXTERIOR ]
+        Angulo 34
+        Bando ALEMAN
+        PermiteAliados 0
+        PermiteAlemanes 1
+        PermiteNeutrales 0
+        AnimDentro SENTADO_EN_SILLA_MESA
+        SoloUsableUnaVez 0
+        XFuera -10        
+      ENDMACRO
+      MACRO ALESCRIPTPARAPETADOR
+        Token ALE_SILLA_01
+        PosMundo [ .XYZ ( -258 2193 45 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA PISTOLA ]
+        Patrullaje [ ]
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Cabo ]
+        Angulo 0
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token ALE_SILLA_02
+        PosMundo [ .XYZ ( -270 1657 32 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Patrullaje [ ]
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Cabo ]
+        Angulo 0
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO METRALLON
+        Token AMET_R
+        PosMundo [ .XYZ ( 116 71 1 ) .ESC DSP_05 ]
+        Angulo 270
+        Atril ATRIL_AMET_R
+        Bichos
+        (
+          MACRO ALESCRIP_ARMAESTATICA
+            Token ALE_MET_R
+            PosMundo [ .XYZ ( 79 98 1 ) .ESC DSP_05 ]
+            Disparador [ .ARMA Z ]
+            Anima [ .NOMBRE_ANI XM.ANI .ASPECTO Metrallero ]
+            Angulo 270
+            EventosRuta ( )
+          ENDMACRO
+        )
+      ENDMACRO
+      MACRO ATRILMETRALLON
+        Token ATRIL_AMET_R
+        PosMundo [ .XYZ ( 116 71 1 ) .ESC DSP_05 ]
+        Angulo 270
+        HayLimiteAngular 1
+        LimAngDerecho 180
+        LimAngIzquierdo 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token MAMON_01
+        PosMundo [ .XYZ ( -489 2158 49 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 284
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token MAMON_02
+        PosMundo [ .XYZ ( -449 2180 49 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA FUSIL ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XF.ANI .ASPECTO Fusilero ]
+        Angulo 224
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token MAMON_03
+        PosMundo [ .XYZ ( -432 2144 38 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Granadero ]
+        Angulo 196
+        EventosRuta ( )
+        NumGranadas 5
+      ENDMACRO
+      MACRO ALESCRIP
+        Token MAMON_04
+        PosMundo [ .XYZ ( -480 2137 49 ) .ESC EXTERIOR ]
+        Disparador [ .ARMA Z ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO OficialSS ]
+        Angulo 69
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIPTPARAPETADOR
+        Token OFICANON_01
+        PosMundo [ .XYZ ( -94 -39 1 ) .ESC DSP_01 ]
+        Disparador [ .ARMA Z ]
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO OficialSS ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token MECCANON_01
+        PosMundo [ .XYZ ( 80 -78 1 ) .ESC DSP_01 ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Mecanico ]
+        Angulo 270
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIPTPARAPETADOR
+        Token OFICANON_02
+        PosMundo [ .XYZ ( 197 40 33 ) .ESC DSP_02 ]
+        Disparador [ .ARMA Z ]
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO OficialSS ]
+        Angulo 90
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token MECCANON_02
+        PosMundo [ .XYZ ( 291 55 33 ) .ESC DSP_02 ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Mecanico ]
+        Angulo 180
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+      MACRO ALESCRIP
+        Token MECCANON2_02
+        PosMundo [ .XYZ ( 274 -122 33 ) .ESC DSP_02 ]
+        Disparador [ .ARMA PISTOLA ]
+        Bando ALEMAN
+        Anima [ .NOMBRE_ANI XP.ANI .ASPECTO Mecanico ]
+        Angulo 0
+        EventosRuta ( )
+        NumGranadas 0
+      ENDMACRO
+    )
+    .FILE_GRUPOS_SCRIPT DSP.GSC
+    .INTENDENCIA
+    [
+      .ZONAS
+      (
+        [
+          .NOMBRE ZONA_PRIMERA_LINEA
+          .LISTA_MAPZON ( [ .ESC EXTERIOR .ZON PRIMERA_LINEA ] )
+        ]
+        [
+          .NOMBRE ZONA_SEGUNDA_LINEA
+          .LISTA_MAPZON ( [ .ESC EXTERIOR .ZON SEGUNDA_LINEA ] )
+        ]
+        [
+          .NOMBRE ZONA_TERCERA_LINEA
+          .LISTA_MAPZON ( [ .ESC EXTERIOR .ZON TERCERA_LINEA ] )
+        ]
+        [
+          .NOMBRE ZONA_TORRETA
+          .LISTA_MAPZON ( [ .ESC EXTERIOR .ZON ZONA_TORRETA ] )
+        ]
+        [
+          .NOMBRE ZONA_155MM
+          .LISTA_MAPZON ( [ .ESC EXTERIOR .ZON ZONA_155MM ] )
+        ]
+        [
+          .NOMBRE ZONA_DSP3
+          .LISTA_MAPZON ( [ .ESC DSP_03 .ZON ZONA_DSP3 ] )
+        ]
+      )
+      .LISTAS_BICHOS
+      (
+        [
+          .NOMBRE METRALLEROS
+          .BICHOS ( ALE_AMETRALL01 ALE_AMETRALL02 ALE_AMETRALL03 )
+        ]
+        [
+          .NOMBRE AMETRALLADORES
+          .BICHOS
+          (
+            ALE_AMETRALL01
+            ALE_AMETRALL02
+            ALE_AMETRALL03
+            ALE_CUBRE_01
+            ALE_CUBRE_02
+            ALE_CUBRE_03
+            ALE_CUBRE_04
+            ALE_GRANADAS_01
+            ALE_JUNTO_AMET01_01
+            ALE_JUNTO_AMET01_02
+            ALE_JUNTO_AMET01_03
+            ALE_JUNTO_AMET01_04
+            ALE_JUNTO_AMET02_01
+            ALE_JUNTO_AMET02_02
+            ALE_JUNTO_AMET02_03
+            ALE_JUNTO_AMET02_04
+            ALE_JUNTO_AMET03_01
+            ALE_JUNTO_AMET03_02
+            ALE_JUNTO_AMET03_03
+          )
+        ]
+        [
+          .NOMBRE ALIADOS
+          .BICHOS
+          (
+            COMANDO
+            CHUSMA01
+            CHUSMA02
+            CHUSMA03
+            CHUSMA04
+            CHUSMA05
+            CHUSMA06
+            CHUSMA07
+            CHUSMA08
+          )
+        ]
+        [
+          .NOMBRE ALEMANES_155MM
+          .BICHOS
+          (
+            ALE_DENTRO_27
+            ALE_DENTRO_28
+            ALE_DENTRO_29
+            OFICANON_01
+            MECCANON_01
+          )
+        ]
+        [
+          .NOMBRE ALEMANES_TORRETA
+          .BICHOS
+          (
+            OFICANON_02
+            MECCANON_02
+            MECCANON2_02
+            ALE_DENTRO_18
+            ALE_DENTRO_19
+            ALE_DENTRO_20
+            ALE_DENTRO_21
+            ALE_DENTRO_22
+            ALE_DENTRO_23
+            ALE_DENTRO_24
+            ALE_DENTRO_25
+            ALE_DENTRO_26
+            ALE_DENTRO_35
+          )
+        ]
+      )
+      .FLAGS
+      (
+        FL_OBES_CONSEGUIDOS
+        FL_PUEDE_MORIR01
+        FL_PUEDE_MORIR02
+        FL_MUERTOS_155MM
+        FL_MUERTOS_TORRETA
+      )
+      .FINMISION
+      [
+        .BICHOSVIP ( [ .BICHO COMANDO ] )
+        .OBJETIVOS_ESPECIALES
+        [
+          .FLAG_CONSEGUIDO FL_OBES_CONSEGUIDOS
+          #          .FLAGS_ABORTADOS ( FL_MISION_FRACASADA GEMU )
+        ]
+      ]
+      .REGLAS
+      (
+        [
+          .NOMBRE MUEREN_ALEMANES_155MM
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichosMuertos
+              [
+                .BICHOS ALEMANES_155MM
+                .CANTIDAD 5
+                .INCAPACITADOS_SON_MUERTOS 1
+              ]
+            )
+          )
+          .OPERACIONES
+          (
+            (
+              OperCambiaFlagIntendencia
+              [ .NOMBREFLAG FL_MUERTOS_155MM .SETALVALOR 1 ]
+            )
+            ( OperLanzaEvento [ .EVENTO 155N ] )
+            ( OperLanzaEvento [ .EVENTO TR01 ] )
+          )
+        ]
+        [
+          .NOMBRE MUEREN_ALEMANES_TORRETA
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichosMuertos
+              [
+                .BICHOS ALEMANES_TORRETA
+                .CANTIDAD 13
+                .INCAPACITADOS_SON_MUERTOS 1
+              ]
+            )
+          )
+          .OPERACIONES
+          (
+            (
+              OperCambiaFlagIntendencia
+              [ .NOMBREFLAG FL_MUERTOS_TORRETA .SETALVALOR 1 ]
+            )
+            ( OperLanzaEvento [ .EVENTO TRRN ] )
+            ( OperLanzaEvento [ .EVENTO TR02 ] )
+          )
+        ]
+        [
+          .NOMBRE CAÑONES_OUT
+          .TIPOANDOR AND
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondFlagIntendencia
+              [ .NOMBREFLAG FL_MUERTOS_TORRETA .VALORQUEMEACTIVA 1 ]
+            )
+            (
+              CondFlagIntendencia
+              [ .NOMBREFLAG FL_MUERTOS_155MM .VALORQUEMEACTIVA 1 ]
+            )
+          )
+          .OPERACIONES
+          (
+            (
+              OperCambiaFlagIntendencia
+              [ .NOMBREFLAG FL_OBES_CONSEGUIDOS .SETALVALOR 1 ]
+            )
+          )
+        ]
+        [
+          .NOMBRE ALIADOS_EN_155MM
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichosEnZona
+              [
+                .BICHOS ALIADOS
+                .ZONA ZONA_155MM
+                .SOLO_VIVOS 1
+                .PERMITE_AMORDAZADOS 0
+                .NECESARIO_TODOS 0
+              ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO 155M ] ) )
+        ]
+        [
+          .NOMBRE ALIADOS_EN_TORRETA01
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichosEnZona
+              [
+                .BICHOS ALIADOS
+                .ZONA ZONA_DSP3
+                .SOLO_VIVOS 1
+                .PERMITE_AMORDAZADOS 0
+                .NECESARIO_TODOS 0
+              ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO TORR ] ) )
+        ]
+        [
+          .NOMBRE ALIADOS_TORRETA02
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichosEnZona
+              [
+                .BICHOS ALIADOS
+                .ZONA ZONA_TORRETA
+                .SOLO_VIVOS 1
+                .PERMITE_AMORDAZADOS 0
+                .NECESARIO_TODOS 0
+              ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO TORR ] ) )
+        ]
+        [
+          .NOMBRE MUEREN_METRALLEROS
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichosMuertos
+              [
+                .BICHOS METRALLEROS
+                .CANTIDAD 3
+                .INCAPACITADOS_SON_MUERTOS 1
+              ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO MET3 ] ) )
+        ]
+        [
+          .NOMBRE MUEREN_PRIMEROS_ALEMANES
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichosMuertos
+              [
+                .BICHOS AMETRALLADORES
+                .CANTIDAD 19
+                .INCAPACITADOS_SON_MUERTOS 1
+              ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO EFIN ] ) )
+        ]
+        [
+          .NOMBRE PASO_PRIMERA_LINEA
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichoEntraEnZona
+              [ .BICHO COMANDO .ZONA ZONA_PRIMERA_LINEA ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO E100 ] ) )
+        ]
+        [
+          .NOMBRE PASO_SEGUNDA_LINEA
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichoEntraEnZona
+              [ .BICHO COMANDO .ZONA ZONA_SEGUNDA_LINEA ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO E200 ] ) )
+        ]
+        [
+          .NOMBRE PASO_TERCERA_LINEA
+          .CUANDOEJECUTAR SOLOLAPRIMERAVEZ
+          .CONDICIONES
+          (
+            (
+              CondBichoEntraEnZona
+              [ .BICHO COMANDO .ZONA ZONA_TERCERA_LINEA ]
+            )
+          )
+          .OPERACIONES ( ( OperLanzaEvento [ .EVENTO E300 ] ) )
+        ]
+      )
+    ]
+    .BANCOPOSICIONES
+    (
+      [
+        .NOMBRE POS_MAMON_1
+        .POS [ .XYZ ( -599 1967 38 ) .ESC EXTERIOR ]
+        .ANGULO 300
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS_MAMON_2
+        .POS [ .XYZ ( -458 2036 38 ) .ESC EXTERIOR ]
+        .ANGULO 300
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS_MAMON_3
+        .POS [ .XYZ ( -538 1997 38 ) .ESC EXTERIOR ]
+        .ANGULO 300
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_MAMON_4
+        .POS [ .XYZ ( -625 1891 37 ) .ESC EXTERIOR ]
+        .ANGULO 45
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS_DSP04_01
+        .TRANSFER VE_DSP04_01
+        .ANGULO 270
+        .ESTADO_LOGICO VENTANA_ABAJO
+      ]
+      [
+        .NOMBRE POS_DSP04_02
+        .TRANSFER VE_DSP04_02
+        .ANGULO 270
+        .ESTADO_LOGICO VENTANA_ABAJO
+      ]
+      [
+        .NOMBRE POS001
+        .POS [ .XYZ ( 579 -569 -96 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS002
+        .POS [ .XYZ ( 348 -724 -97 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS003
+        .POS [ .XYZ ( 645 -561 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS004
+        .POS [ .XYZ ( 399 -733 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS005
+        .POS [ .XYZ ( 304 -435 -97 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS006
+        .POS [ .XYZ ( 353 -440 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS007
+        .POS [ .XYZ ( 616 -577 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS008
+        .POS [ .XYZ ( 373 -732 -97 ) .ESC EXTERIOR ]
+        .ANGULO 90
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS009
+        .POS [ .XYZ ( 329 -444 -97 ) .ESC EXTERIOR ]
+        .ANGULO 260
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS010
+        .POS [ .XYZ ( 485 -822 -97 ) .ESC EXTERIOR ]
+        .ANGULO 140
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS011
+        .POS [ .XYZ ( 426 -901 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS012
+        .POS [ .XYZ ( 385 -921 -97 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS013
+        .POS [ .XYZ ( 187 -1140 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS014
+        .POS [ .XYZ ( 147 -1125 -97 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS015
+        .POS [ .XYZ ( 68 -1064 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS016
+        .POS [ .XYZ ( 41 -1069 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS017
+        .POS [ .XYZ ( -13 -1187 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS018
+        .POS [ .XYZ ( 37 -1206 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS019
+        .POS [ .XYZ ( -163 -1265 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS020
+        .POS [ .XYZ ( -99 -1282 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS021
+        .POS [ .XYZ ( -133 -1286 -97 ) .ESC EXTERIOR ]
+        .ANGULO 260
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS022
+        .POS [ .XYZ ( 157 -836 -97 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS023
+        .POS [ .XYZ ( -20 -830 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS024
+        .POS [ .XYZ ( -77 -830 -97 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS025
+        .POS [ .XYZ ( -250 -700 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS026
+        .POS [ .XYZ ( -304 -686 -98 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS027
+        .POS [ .XYZ ( -501 -566 -98 ) .ESC EXTERIOR ]
+        .ANGULO 60
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS028
+        .POS [ .XYZ ( -423 -531 -98 ) .ESC EXTERIOR ]
+        .ANGULO 30
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS029
+        .POS [ .XYZ ( -86 -592 -95 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS030
+        .POS [ .XYZ ( -27 -430 -96 ) .ESC EXTERIOR ]
+        .ANGULO 130
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS031
+        .POS [ .XYZ ( 47 -396 -97 ) .ESC EXTERIOR ]
+        .ANGULO 60
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS032
+        .POS [ .XYZ ( 3 -1354 -97 ) .ESC EXTERIOR ]
+        .ANGULO 124
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS033
+        .POS [ .XYZ ( 4 -447 -97 ) .ESC EXTERIOR ]
+        .ANGULO 230
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS034
+        .POS [ .XYZ ( 75 -377 -97 ) .ESC EXTERIOR ]
+        .ANGULO 65
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS035
+        .POS [ .XYZ ( 36 -423 -97 ) .ESC EXTERIOR ]
+        .ANGULO 50
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS036
+        .POS [ .XYZ ( 330 -262 -100 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS037
+        .POS [ .XYZ ( 362 -286 -100 ) .ESC EXTERIOR ]
+        .ANGULO 230
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS038
+        .POS [ .XYZ ( 289 -254 -93 ) .ESC EXTERIOR ]
+        .ANGULO 130
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS039
+        .POS [ .XYZ ( -85 -210 -96 ) .ESC EXTERIOR ]
+        .ANGULO 50
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS040
+        .POS [ .XYZ ( -182 -205 -95 ) .ESC EXTERIOR ]
+        .ANGULO 160
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS041
+        .POS [ .XYZ ( -238 -298 -96 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS042
+        .POS [ .XYZ ( -604 -574 -98 ) .ESC EXTERIOR ]
+        .ANGULO 164
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS043
+        .POS [ .XYZ ( -667 -559 -98 ) .ESC EXTERIOR ]
+        .ANGULO 30
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS044
+        .POS [ .XYZ ( -612 -776 -98 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS045
+        .POS [ .XYZ ( -800 -661 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS046
+        .POS [ .XYZ ( -744 -783 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS047
+        .POS [ .XYZ ( -725 -532 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS048
+        .POS [ .XYZ ( -839 -628 -97 ) .ESC EXTERIOR ]
+        .ANGULO 105
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS049
+        .POS [ .XYZ ( -727 -473 -96 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS050
+        .POS [ .XYZ ( -250 -933 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS051
+        .POS [ .XYZ ( -430 -1007 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS052
+        .POS [ .XYZ ( -365 -1015 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS053
+        .POS [ .XYZ ( -277 -1104 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS054
+        .POS [ .XYZ ( -482 -895 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS055
+        .POS [ .XYZ ( -539 -868 -98 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS056
+        .POS [ .XYZ ( -198 -514 -96 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS057
+        .POS [ .XYZ ( 770 -326 -97 ) .ESC EXTERIOR ]
+        .ANGULO 40
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS058
+        .POS [ .XYZ ( 638 -379 -99 ) .ESC EXTERIOR ]
+        .ANGULO 150
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS059
+        .POS [ .XYZ ( 532 -349 -94 ) .ESC EXTERIOR ]
+        .ANGULO 90
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS060
+        .POS [ .XYZ ( 769 -6 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS061
+        .POS [ .XYZ ( 531 -26 -101 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS062
+        .POS [ .XYZ ( 682 -51 -96 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS063
+        .POS [ .XYZ ( 401 257 -88 ) .ESC EXTERIOR ]
+        .ANGULO 140
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS064
+        .POS [ .XYZ ( 171 131 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS065
+        .POS [ .XYZ ( 122 158 -96 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS066
+        .POS [ .XYZ ( 228 231 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS067
+        .POS [ .XYZ ( -178 148 -86 ) .ESC EXTERIOR ]
+        .ANGULO 30
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS068
+        .POS [ .XYZ ( -419 -14 -90 ) .ESC EXTERIOR ]
+        .ANGULO 150
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS069
+        .POS [ .XYZ ( -822 -219 -97 ) .ESC EXTERIOR ]
+        .ANGULO 50
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS070
+        .POS [ .XYZ ( 90 -1061 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS071
+        .POS [ .XYZ ( -752 -881 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS072
+        .POS [ .XYZ ( -668 -937 -98 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS073
+        .POS [ .XYZ ( -537 -983 -98 ) .ESC EXTERIOR ]
+        .ANGULO 130
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS074
+        .POS [ .XYZ ( -692 -919 -98 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS075
+        .POS [ .XYZ ( -635 -931 -98 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS076
+        .POS [ .XYZ ( -613 -895 -98 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS077
+        .POS [ .XYZ ( -517 -892 -98 ) .ESC EXTERIOR ]
+        .ANGULO 140
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS078
+        .POS [ .XYZ ( -578 -784 -98 ) .ESC EXTERIOR ]
+        .ANGULO 150
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS079
+        .POS [ .XYZ ( -737 -839 -97 ) .ESC EXTERIOR ]
+        .ANGULO 50
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS080
+        .POS [ .XYZ ( 297 -1144 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+/*
+      [
+        .NOMBRE POS081
+        .POS [ .XYZ ( -752 -881 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+*/
+      [
+        .NOMBRE POS082
+        .POS [ .XYZ ( 279 -1111 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS083
+        .POS [ .XYZ ( 219 -1120 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS084
+        .POS [ .XYZ ( 226 -1205 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS085
+        .POS [ .XYZ ( 107 -1020 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS086
+        .POS [ .XYZ ( 193 -842 -97 ) .ESC EXTERIOR ]
+        .ANGULO 75
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS087
+        .POS [ .XYZ ( 219 -825 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS088
+        .POS [ .XYZ ( 356 -903 -97 ) .ESC EXTERIOR ]
+        .ANGULO 150
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS089
+        .POS [ .XYZ ( 391 -1018 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS090
+        .POS [ .XYZ ( 175 -854 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS091
+        .POS [ .XYZ ( 180 -620 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS092
+        .POS [ .XYZ ( -46 -840 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS093
+        .POS [ .XYZ ( -285 -1319 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS094
+        .POS [ .XYZ ( -231 -1316 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS095
+        .POS [ .XYZ ( -345 -1257 -98 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS096
+        .POS [ .XYZ ( -361 -1140 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS097
+        .POS [ .XYZ ( -241 -1100 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS098
+        .POS [ .XYZ ( -282 -933 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS099
+        .POS [ .XYZ ( -307 -1055 -97 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS100
+        .POS [ .XYZ ( -297 -1083 -97 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS101
+        .POS [ .XYZ ( -256 -1324 -97 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS102
+        .POS [ .XYZ ( -207 -250 -95 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS103
+        .POS [ .XYZ ( 252 -307 -95 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS104
+        .POS [ .XYZ ( -115 -614 -97 ) .ESC EXTERIOR ]
+        .ANGULO 75
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS105
+        .POS [ .XYZ ( 267 -278 -92 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS106
+        .POS [ .XYZ ( -151 -602 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS107
+        .POS [ .XYZ ( 388 -305 -99 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS108
+        .POS [ .XYZ ( -134 -224 -95 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS109
+        .POS [ .XYZ ( 724 -856 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS110
+        .POS [ .XYZ ( 704 -749 -97 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS111
+        .POS [ .XYZ ( 655 -752 -97 ) .ESC EXTERIOR ]
+        .ANGULO 130
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS112
+        .POS [ .XYZ ( 515 -781 -98 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS113
+        .POS [ .XYZ ( 238 -338 -96 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS114
+        .POS [ .XYZ ( 680 -761 -97 ) .ESC EXTERIOR ]
+        .ANGULO 95
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS115
+        .POS [ .XYZ ( 717 -723 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS116
+        .POS [ .XYZ ( 524 -852 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS117
+        .POS [ .XYZ ( 685 -382 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS118
+        .POS [ .XYZ ( 749 -398 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS119
+        .POS [ .XYZ ( 838 -334 -97 ) .ESC EXTERIOR ]
+        .ANGULO 120
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS120
+        .POS [ .XYZ ( -826 -660 -98 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS121
+        .POS [ .XYZ ( -912 -821 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS122
+        .POS [ .XYZ ( -980 -800 -98 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS123
+        .POS [ .XYZ ( -937 -685 -103 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS124
+        .POS [ .XYZ ( -729 -1075 -98 ) .ESC EXTERIOR ]
+        .ANGULO 95
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS125
+        .POS [ .XYZ ( -793 -859 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS126
+        .POS [ .XYZ ( -775 -781 -97 ) .ESC EXTERIOR ]
+        .ANGULO 110
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS127
+        .POS [ .XYZ ( -803 -757 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS128
+        .POS [ .XYZ ( -949 -834 -97 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS129
+        .POS [ .XYZ ( -730 -504 -96 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS130
+        .POS [ .XYZ ( -861 -243 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS131
+        .POS [ .XYZ ( -888 -233 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS132
+        .POS [ .XYZ ( -902 -202 -97 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS133
+        .POS [ .XYZ ( -743 -446 -97 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS134
+        .POS [ .XYZ ( -752 -121 -102 ) .ESC EXTERIOR ]
+        .ANGULO 95
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS135
+        .POS [ .XYZ ( -793 -79 -102 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS136
+        .POS [ .XYZ ( -851 54 -102 ) .ESC EXTERIOR ]
+        .ANGULO 60
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS137
+        .POS [ .XYZ ( -896 73 -102 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS138
+        .POS [ .XYZ ( -836 1 -102 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS139
+        .POS [ .XYZ ( -819 -57 -102 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS140
+        .POS [ .XYZ ( -212 139 -87 ) .ESC EXTERIOR ]
+        .ANGULO 10
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS141
+        .POS [ .XYZ ( -235 124 -89 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS142
+        .POS [ .XYZ ( -484 -214 -96 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS143
+        .POS [ .XYZ ( -440 -190 -95 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS144
+        .POS [ .XYZ ( -220 -80 -100 ) .ESC EXTERIOR ]
+        .ANGULO 95
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS145
+        .POS [ .XYZ ( -181 -51 -98 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS146
+        .POS [ .XYZ ( -456 -212 -96 ) .ESC EXTERIOR ]
+        .ANGULO 60
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS147
+        .POS [ .XYZ ( -602 -259 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS148
+        .POS [ .XYZ ( -564 -254 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS149
+        .POS [ .XYZ ( -391 18 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS150
+        .POS [ .XYZ ( 712 -51 -96 ) .ESC EXTERIOR ]
+        .ANGULO 10
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS151
+        .POS [ .XYZ ( 498 -36 -95 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS152
+        .POS [ .XYZ ( 478 -14 -95 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS153
+        .POS [ .XYZ ( 141 134 -96 ) .ESC EXTERIOR ]
+        .ANGULO 100
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS154
+        .POS [ .XYZ ( 753 -40 -97 ) .ESC EXTERIOR ]
+        .ANGULO 95
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS155
+        .POS [ .XYZ ( 980 118 -95 ) .ESC EXTERIOR ]
+        .ANGULO 80
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS156
+        .POS [ .XYZ ( 941 99 -97 ) .ESC EXTERIOR ]
+        .ANGULO 60
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS157
+        .POS [ .XYZ ( -251 -73 -98 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS158
+        .POS [ .XYZ ( -20 -205 -94 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS159
+        .POS [ .XYZ ( -297 -337 -96 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS160
+        .POS [ .XYZ ( 197 145 -97 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS161
+        .POS [ .XYZ ( 736 -65 -96 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS162
+        .POS [ .XYZ ( -257 113 -91 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS163
+        .POS [ .XYZ ( 13 -199 -100 ) .ESC EXTERIOR ]
+        .ANGULO 70
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_01
+        .POS [ .XYZ ( -476 2020 38 ) .ESC EXTERIOR ]
+        .ANGULO 306
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_01_ALAM
+        .POS [ .XYZ ( -44 1727 107 ) .ESC EXTERIOR ]
+        .ANGULO 200
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_02
+        .POS [ .XYZ ( -878 2136 38 ) .ESC EXTERIOR ]
+        .ANGULO 230
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_02_ALAM
+        .POS [ .XYZ ( -141 1602 -33 ) .ESC EXTERIOR ]
+        .ANGULO 200
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_03
+        .POS [ .XYZ ( -541 2133 49 ) .ESC EXTERIOR ]
+        .ANGULO 0
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_03_ALAM
+        .POS [ .XYZ ( 18 1621 107 ) .ESC EXTERIOR ]
+        .ANGULO 200
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS_R_04
+        .POS [ .XYZ ( -138 2372 38 ) .ESC EXTERIOR ]
+        .ANGULO 283
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_04_ALAM
+        .POS [ .XYZ ( -234 1853 38 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS_R_05
+        .POS [ .XYZ ( -107 2155 39 ) .ESC EXTERIOR ]
+        .ANGULO 253
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS_R_05_ALAM
+        .POS [ .XYZ ( -160 1869 40 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_06
+        .POS [ .XYZ ( -3 2247 -20 ) .ESC EXTERIOR ]
+        .ANGULO 299
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_06_ALAM
+        .POS [ .XYZ ( -278 1670 32 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_07
+        .POS [ .XYZ ( 61 2245 -20 ) .ESC EXTERIOR ]
+        .ANGULO 299
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_07_ALAM
+        .POS [ .XYZ ( -651 1862 37 ) .ESC EXTERIOR ]
+        .ANGULO 0
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_08
+        .POS [ .XYZ ( -318 2058 40 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_08_ALAM
+        .POS [ .XYZ ( -683 1898 37 ) .ESC EXTERIOR ]
+        .ANGULO 0
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_01
+        .POS [ .XYZ ( 566 2144 38 ) .ESC EXTERIOR ]
+        .ANGULO 213
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_01_ALAM
+        .POS [ .XYZ ( 231 1991 38 ) .ESC EXTERIOR ]
+        .ANGULO 180
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_02
+        .POS [ .XYZ ( 420 2228 47 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_02_ALAM
+        .POS [ .XYZ ( 586 2069 36 ) .ESC EXTERIOR ]
+        .ANGULO 180
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_03
+        .POS [ .XYZ ( 306 2041 35 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_03_ALAM
+        .POS [ .XYZ ( 536 2096 36 ) .ESC EXTERIOR ]
+        .ANGULO 190
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_04
+        .POS [ .XYZ ( 179 2058 38 ) .ESC EXTERIOR ]
+        .ANGULO 0
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_04_ALAM
+        .POS [ .XYZ ( 450 2145 40 ) .ESC EXTERIOR ]
+        .ANGULO 200
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_05
+        .POS [ .XYZ ( 297 2397 45 ) .ESC EXTERIOR ]
+        .ANGULO 0
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_05_ALAM
+        .POS [ .XYZ ( 379 2106 34 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R2_06
+        .POS [ .XYZ ( 295 1693 53 ) .ESC EXTERIOR ]
+        .ANGULO 71
+        .ESTADO_LOGICO AGACHADO
+      ]
+      [
+        .NOMBRE POS_R2_06_ALAM
+        .POS [ .XYZ ( 339 1831 45 ) .ESC EXTERIOR ]
+        .ANGULO 190
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE PO_R_07
+        .POS [ .XYZ ( -826 2271 38 ) .ESC EXTERIOR ]
+        .ANGULO 241
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+      [
+        .NOMBRE POS_R_07_ALAM
+        .POS [ .XYZ ( -225 1886 39 ) .ESC EXTERIOR ]
+        .ANGULO 270
+        .ESTADO_LOGICO ARRODILLADO
+      ]
+    )
+    .RAILES_NUEVOS
+    (
+      [
+        .ESCENARIO EXTERIOR
+        .NODOS
+        (
+          [ .ID 1 .POS ( -33 -2784 -109 ) ]
+          [ .ID 2 .POS ( -6 -1511 -101 ) ]
+          [ .ID 3 .POS ( -664 -1275 -100 ) ]
+          [ .ID 4 .POS ( -873 -2770 -116 ) ]
+          [ .ID 5 .POS ( 730 -2633 -117 ) ]
+          [ .ID 6 .POS ( 599 -1173 -97 ) ]
+          [ .ID 7 .POS ( -387 -1483 -104 ) ]
+          [ .ID 8 .POS ( -491 -2729 -113 ) ]
+          [ .ID 9 .POS ( 245 -1399 -99 ) ]
+          [ .ID 10 .POS ( 290 -2647 -112 ) ]
+          [ .ID 11 .POS ( -887 -1252 -100 ) ]
+          [ .ID 12 .POS ( -1198 -2771 -119 ) ]
+          [ .ID 13 .POS ( 902 -1077 -98 ) ]
+          [ .ID 14 .POS ( 912 -1734 -120 ) ]
+          [ .ID 15 .POS ( 1017 -2723 -120 ) ]
+          [ .ID 16 .POS ( -192 -1578 -104 ) ]
+          [ .ID 17 .POS ( -292 -2786 -106 ) ]
+          [ .ID 24 .POS ( 480 -597 -96 ) ]
+          [ .ID 25 .POS ( 236 -490 -96 ) ]
+          [ .ID 26 .POS ( 138 -313 -96 ) ]
+          [ .ID 27 .POS ( 71 -185 -95 ) ]
+          [ .ID 28 .POS ( 50 -34 -95 ) ]
+          [ .ID 29 .POS ( -78 263 -66 ) ]
+          [ .ID 30 .POS ( -192 540 -55 ) ]
+          [ .ID 31 .POS ( -228 626 -54 ) ]
+          [ .ID 32 .POS ( -139 734 -54 ) ]
+          [ .ID 33 .POS ( -47 829 -54 ) ]
+          [ .ID 34 .POS ( 50 835 -54 ) ]
+          [ .ID 35 .POS ( 102 741 -54 ) ]
+          [ .ID 37 .POS ( 68 641 -54 ) ]
+          [ .ID 40 .POS ( -49 660 -55 ) ]
+          [ .ID 41 .POS ( -226 826 -54 ) ]
+          [ .ID 42 .POS ( -344 810 -54 ) ]
+          [ .ID 43 .POS ( -407 715 -54 ) ]
+          [ .ID 44 .POS ( -380 595 -54 ) ]
+          [ .ID 45 .POS ( -247 538 -54 ) ]
+          [ .ID 46 .POS ( 770 -1045 -97 ) ]
+          [ .ID 47 .POS ( -270 756 -54 ) ]
+        )
+        .ARISTAS
+        (
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 1
+            .R1 ( 30 -701 )
+            .R4 ( -143 -630 )
+            .NODO0 2
+            .NODO1 1
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 2
+            .R1 ( 104 747 )
+            .R4 ( 321 1052 )
+            .NODO0 4
+            .NODO1 3
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 3
+            .R1 ( 367 -1213 )
+            .R4 ( 65 -729 )
+            .NODO0 6
+            .NODO1 5
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 4
+            .R1 ( 51 623 )
+            .R4 ( 325 1894 )
+            .NODO0 8
+            .NODO1 7
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 5
+            .R1 ( -22 624 )
+            .R4 ( -248 2042 )
+            .NODO0 10
+            .NODO1 9
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 6
+            .R1 ( 651 1323 )
+            .R4 ( 338 1726 )
+            .NODO0 12
+            .NODO1 11
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 7
+            .R1 ( -157 610 )
+            .R4 ( 13 498 )
+            .NODO0 15
+            .NODO1 14
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 8
+            .R1 ( 10 371 )
+            .R4 ( -92 362 )
+            .NODO0 14
+            .NODO1 13
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 9
+            .R1 ( 50 604 )
+            .R4 ( 18 1005 )
+            .NODO0 17
+            .NODO1 16
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 10
+            .R1 ( 93 46 )
+            .R4 ( 1 58 )
+            .NODO0 37
+            .NODO1 35
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 11
+            .R1 ( 4 178 )
+            .R4 ( -47 35 )
+            .NODO0 35
+            .NODO1 34
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 12
+            .R1 ( -68 51 )
+            .R4 ( -99 -94 )
+            .NODO0 34
+            .NODO1 33
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 13
+            .R1 ( -73 -69 )
+            .R4 ( -74 -46 )
+            .NODO0 33
+            .NODO1 32
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 14
+            .R1 ( -96 -59 )
+            .R4 ( -5 -170 )
+            .NODO0 32
+            .NODO1 31
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 15
+            .R1 ( -3 -115 )
+            .R4 ( 22 -51 )
+            .NODO0 31
+            .NODO1 30
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 16
+            .R1 ( 51 -120 )
+            .R4 ( 40 -119 )
+            .NODO0 30
+            .NODO1 29
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 17
+            .R1 ( 64 -190 )
+            .R4 ( 81 -162 )
+            .NODO0 29
+            .NODO1 28
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 18
+            .R1 ( 77 -156 )
+            .R4 ( 7 -72 )
+            .NODO0 28
+            .NODO1 27
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 19
+            .R1 ( 15 -158 )
+            .R4 ( 32 -78 )
+            .NODO0 27
+            .NODO1 26
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 20
+            .R1 ( 53 -126 )
+            .R4 ( 122 -135 )
+            .NODO0 26
+            .NODO1 25
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 21
+            .R1 ( 195 -215 )
+            .R4 ( 217 -127 )
+            .NODO0 25
+            .NODO1 24
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 28
+            .R1 ( 106 -32 )
+            .R4 ( 103 51 )
+            .NODO0 40
+            .NODO1 37
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 29
+            .R1 ( 189 -49 )
+            .R4 ( 152 -46 )
+            .NODO0 41
+            .NODO1 40
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 30
+            .R1 ( -201 -122 )
+            .R4 ( -46 100 )
+            .NODO0 45
+            .NODO1 44
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 31
+            .R1 ( -27 59 )
+            .R4 ( 18 156 )
+            .NODO0 44
+            .NODO1 43
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 32
+            .R1 ( 21 180 )
+            .R4 ( 48 32 )
+            .NODO0 43
+            .NODO1 42
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 33
+            .R1 ( 70 47 )
+            .R4 ( 164 -42 )
+            .NODO0 42
+            .NODO1 41
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 34
+            .R1 ( -344 488 )
+            .R4 ( -287 168 )
+            .NODO0 46
+            .NODO1 24
+          ]
+          [
+            .SENTIDO_UNICO 0
+            .SENTIDO_INVERTIDO 0
+            .TIPO NORMAL
+            .ID 35
+            .R1 ( 197 -243 )
+            .R4 ( -101 -61 )
+            .NODO0 47
+            .NODO1 45
+          ]
+        )
+      ]
+    )
+    .SONIDOSAMBIENTE
+    (
+      [
+        .FLISONIDO MAO2
+        .XYZ
+        (
+          ( 814.395630 -1362.901978 -96.000000 )
+          ( -87.060066 -1703.454590 -96.000000 )
+          ( -930.396729 -1013.615295 -103.000000 )
+        )
+        .ESC EXTERIOR
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.99
+      ]
+      [
+        .FLISONIDO EXN3
+        .XYZ
+        (
+          ( 34.057327 -464.639465 -102.900002 )
+          ( -227.841553 931.205811 -53.900002 )
+        )
+        .RETARDOS ( 100 200 250 300 400 )
+        .ESC EXTERIOR
+        .OMNIPRESENTE 1
+        .CONTINUO 0
+        .VOL 0.76
+      ]
+      [
+        .FLISONIDO GUE2
+        .XYZ
+        (
+          ( -972.364929 452.219604 65.099998 )
+          ( 697.360168 1548.928223 80.000000 )
+          ( 518.662598 -1417.537476 -96.000000 )
+        )
+        .ESC EXTERIOR
+        .OMNIPRESENTE 1
+        .CONTINUO 1
+        .VOL 0.82
+      ]
+      [
+        .FLISONIDO GUE1
+        .XYZ
+        (
+          ( -844.676514 -789.708191 -102.900002 )
+          ( -660.641296 1669.826294 161.100006 )
+          ( 584.737183 2145.732422 38.000000 )
+        )
+        .ESC EXTERIOR
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.93
+      ]
+      [
+        .FLISONIDO GINT
+        .XYZ ( ( 2.744736 14.462325 1.100000 ) )
+        .ESC DSP_01
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.27
+      ]
+      [
+        .FLISONIDO GINT
+        .XYZ ( ( 44.103779 -5.511658 33.000000 ) )
+        .ESC DSP_02
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.27
+      ]
+      [
+        .FLISONIDO GINT
+        .XYZ ( ( 30.388817 -23.225697 33.099998 ) )
+        .ESC DSP_03
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.27
+      ]
+      [
+        .FLISONIDO GINT
+        .XYZ ( ( 54.165436 -87.363510 151.000000 ) )
+        .ESC DSP_04
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.27
+      ]
+      [
+        .FLISONIDO GINT
+        .XYZ ( ( 55.695309 39.267273 1.000000 ) )
+        .ESC DSP_05
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.30
+      ]
+      [
+        .FLISONIDO GINT
+        .XYZ ( ( 17.975536 -41.264668 151.100006 ) )
+        .ESC DSP_06
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.28
+      ]
+      [
+        .FLISONIDO GINT
+        .XYZ ( ( -56.134983 19.570194 11.000000 ) )
+        .ESC DSP_07
+        .OMNIPRESENTE 0
+        .CONTINUO 1
+        .VOL 0.27
+      ]
+    )
+  ]
+  .INTERFAZ
+  [
+    .MULTIPLE [ .ITEMS_BASICOS MACRO IT_MULTIPLE ENDMACRO .ITEMS ( ) ]
+    .SUPRAINTERFAZ [ .VENTANA_OBJETIVOS DSP\DSP.TUT .GAMETIPS DSP\DSP.GMT ]
+  ]
+  .FICHEROS [ .STR DSP.STR ]
+  .BAS DSP.BAS
+]

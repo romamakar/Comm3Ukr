@@ -3,7 +3,7 @@ name: Build and Release Zip
 on:
   push:
     branches:
-      - "master"
+      - "main"
 
 jobs:
   build:

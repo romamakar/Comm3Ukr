@@ -1,6 +1,7 @@
 # Українізатор для Commandos 3
 Commandos3 Ukr. v.1.42
-![example workflow](https://github.com/romamakar/Comm3Ukr/actions/workflows/dotnet-desktop.yml/badge.svg?branch=master)
+
+![example workflow](https://github.com/romamakar/Comm3Ukr/actions/workflows/dotnet-desktop.yml/badge.svg?branch=main)
 
 Це українізатор для оригінальної версії - не HD
 
